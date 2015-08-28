@@ -57,6 +57,10 @@ default['mariadb']['mysqld']['query_cache_size']        = '64M'
 default['mariadb']['mysqld']['query_cache_type']        = ''
 default['mariadb']['mysqld']['default_storage_engine']  = 'InnoDB'
 default['mariadb']['mysqld']['options']                 = {}
+# slow log options
+default['mariadb']['mysqld']['slow_query_log'] = 1
+default['mariadb']['mysqld']['slow_query_log_file'] = "/var/log/mysql/mariadb-slow.log"
+default['mariadb']['mysqld']['long_query_time'] = 2
 
 #
 # InnoDB default configuration
